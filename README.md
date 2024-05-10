@@ -44,6 +44,10 @@ $ firebase deploy
 $ npm run build
 ```
 
+```bash
+$ firebase deploy
+```
+
 ---
 
 ## Server Deployment Steps
