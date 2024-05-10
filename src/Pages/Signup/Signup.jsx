@@ -11,11 +11,9 @@ const Signup = () => {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, email, password);
     createUser(email, password)
       .then((usrCredential) => {
         const user = usrCredential.user;
-        console.log(user);
       })
       .catch((error) => {
         const errorMassage = error.massage;

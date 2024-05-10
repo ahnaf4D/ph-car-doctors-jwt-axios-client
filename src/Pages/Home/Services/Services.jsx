@@ -4,7 +4,7 @@ import useService from '../../../hooks/userService';
 const Services = () => {
   // const [services, setServices] = useState([]);
   // useEffect(() => {
-  //   fetch('http://localhost:3000/api/services')
+  //   fetch('https://car-doctor-eta-nine.vercel.app/api/services')
   //     .then((res) => res.json())
   //     .then((data) => setServices(data));
   // }, []);

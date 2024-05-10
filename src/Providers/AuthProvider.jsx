@@ -28,23 +28,25 @@ const AuthProvider = ({ children }) => {
       const userEmail = currentUser?.email || user?.email;
       const loggedUser = { email: userEmail };
       setUser(currentUser);
-      console.log('current user', currentUser);
       // We get a user or not
       setLoading(false);
-      console.log(currentUser);
       if (currentUser) {
         axios
-          .post('http://localhost:3000/auth/jwt', loggedUser, {
+          .post('https://car-doctor-eta-nine.vercel.app/auth/jwt', loggedUser, {
             withCredentials: true,
           })
           .then((res) => {
-            console.log('token response', res.data);
+            console.log('token response');
           });
       } else {
         axios
-          .post(`http://localhost:3000/auth/logout`, loggedUser, {
-            withCredentials: true,
-          })
+          .post(
+            `https://car-doctor-eta-nine.vercel.app/auth/logout`,
+            loggedUser,
+            {
+              withCredentials: true,
+            }
+          )
           .then((res) => console.log(res.data));
       }
     });

@@ -1,6 +1,5 @@
 const BookingRow = ({ booking, handleDelete, handleBookingConfirm }) => {
   const { _id, img, serviceName, name, date, price, email, status } = booking;
-  // console.log(handleBookingConfirm);
 
   return (
     <tr className='border-b border-gray-200 hover cursor-pointer'>

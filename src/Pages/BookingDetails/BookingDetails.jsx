@@ -17,12 +17,11 @@ const BookingDetails = () => {
   const handleDelete = (id) => {
     const procced = confirm('Are You Sure Wanna to Delete');
     if (procced) {
-      fetch(`http://localhost:3000/api/bookings/${id}`, {
+      fetch(`https://car-doctor-eta-nine.vercel.app/api/bookings/${id}`, {
         method: 'DELETE',
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           if (data.deletedCount > 0) {
             alert('Successfully deleted one document.');
             const remaining = bookings.filter((booking) => booking._id !== id);
@@ -32,7 +31,7 @@ const BookingDetails = () => {
     }
   };
   const handleBookingConfirm = (id) => {
-    fetch(`http://localhost:3000/api/bookings/${id}`, {
+    fetch(`https://car-doctor-eta-nine.vercel.app/api/bookings/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-type': 'application/json',
@@ -41,7 +40,6 @@ const BookingDetails = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.modifiedCount > 0) {
           const remaining = bookings.filter((booking) => booking._id !== id);
           const updated = bookings.find((booking) => booking._id !== id);

@@ -22,7 +22,7 @@ const BookService = () => {
       price,
       img,
     };
-    fetch(`http://localhost:3000/api/bookings`, {
+    fetch(`https://car-doctor-eta-nine.vercel.app/api/bookings`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
